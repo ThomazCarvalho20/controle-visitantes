@@ -40,7 +40,7 @@ def informacoes_visitante(request, id): # View para exibir informações detalha
     
     visitante = get_object_or_404(Visitantes, id=id) # Obtém o visitante pelo ID ou retorna 404 se não encontrado
     
-    form = AutorizacaoVisitanteForm()
+    form = AutorizacaoVisitanteForm() # Inicializa o formulário de autorização do visitante
     
     if request.method == "POST": # Verifica se o formulário foi submetido
         form = AutorizacaoVisitanteForm(request.POST, instance=visitante) # Popula o formulário com os dados submetidos
